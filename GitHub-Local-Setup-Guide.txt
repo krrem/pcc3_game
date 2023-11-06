@@ -1,0 +1,44 @@
+This is an instruction on how to connect GitHub repo with your local git repository, produced with ChatGPT-4 and tested by file's author:
+
+To connect a local directory to a newly created GitHub repository and ensure that changes committed locally are reflected on GitHub, you can follow these steps:
+
+Open Git Bash:
+Navigate to your local project directory using the cd command in Git Bash.
+
+Initialize the Local Directory as a Git Repository (if not already done):
+If you haven't already initialized your local directory as a Git repository, do it with the following command:
+    git init
+
+Add the Remote Repository:
+Link your local repository to the GitHub repository using the git remote add command. Replace your_username with your GitHub username and your_repository with the name of your GitHub repository.
+    git remote add origin https://github.com/your_username/your_repository.git
+
+Verify the Remote URL:
+Make sure that the remote URL has been set correctly:
+    git remote -v
+
+You should see the URL for your GitHub repository listed.
+
+Add Your Files to the Local Repository:
+Add the files you want to commit to the repository's staging area:
+    git add .
+
+or if you want to add specific files only, use:
+    git add <filename>
+
+Commit Your Changes:
+Commit the changes in the staging area with a message describing what you've changed:
+    git commit -m "Initial commit"
+
+Push Your Changes to GitHub:
+Push the commit from your local repository to GitHub:
+    git push -u origin main
+or if your main branch is named differently, replace main with your branch name.
+
+Enter Your GitHub Credentials:
+If you are asked for your GitHub credentials, provide your username and password. If you have two-factor authentication enabled, you'll need to provide a personal access token instead of a password.
+
+Check Your Repository on GitHub:
+After the push operation completes, refresh your GitHub repository page in the browser. You should now see your files there.
+
+If you have any unstaged changes or you're working with an existing repository, make sure all your changes are committed before you push to the GitHub repository. If you're pushing to a protected branch, make sure you have the permissions to do so
